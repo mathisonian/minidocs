@@ -33,9 +33,10 @@ module.exports = function (opts) {
           var href = node.href
 
           if (window.location.pathname !== node.pathname || ('routerIgnore' in node.dataset)) {
-            send('location:setLocation', { location: href }, done)
-            window.history.pushState(null, null, href)
-            document.body.scrollTop = 0
+            window.location.href = href;
+            // send('location:setLocation', { location: href }, done)
+            // window.history.pushState(null, null, href)
+            // document.body.scrollTop = 0
           } else {
             window.location.hash = node.hash
             var el = document.querySelector(node.hash)
