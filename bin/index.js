@@ -12,6 +12,7 @@ var parseOptions = require('../lib/parse-options')
 var createCSS = require('../lib/create-css')
 var createHTML = require('../lib/create-html')
 var createAssets = require('../lib/create-assets')
+var createCNAME = require('../lib/create-cname')
 var createJS = require('../lib/create-js')
 var createOutputDir = require('../lib/create-output-dir')
 var createPushstateFile = require('../lib/create-pushstate-file')
@@ -98,7 +99,8 @@ function build (options) {
     createJS,
     createCSS,
     createHTML,
-    createAssets
+    createAssets,
+    createCNAME
   ]
 
   if (options.argv.pushstate) {
